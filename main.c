@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <math.h>
 #include "RSA.h"
 #include "gmp.h"
@@ -14,7 +15,7 @@ int main()
     FILE *fp = fopen("key_generate.txt","w+");
     key_generate(fp);
 
-    char *plain = "AAABBB123";
+    char *plain = "AAAbbbcccc;1.+";
     Encrypt(plain, fp);
 
     fclose(fp);

@@ -12,14 +12,15 @@
 	<stdbool.h>
 	<math.h>
 
-1537413323 source:d:\desktop\codeblocks\rsa_c\main.c
+1537421363 source:d:\desktop\codeblocks\rsa_c\main.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
 	<math.h>
 	"RSA.h"
 	"gmp.h"
 
-1537412996 d:\desktop\codeblocks\rsa_c\rsa.h
+1537421341 d:\desktop\codeblocks\rsa_c\rsa.h
 
 1537013621 source:d:\desktop\codeblocks\rsa_c\sieve.c
 	<stdio.h>
@@ -42,14 +43,58 @@
 	"gmp.h"
 	<time.h>
 
-1537414081 source:d:\desktop\codeblocks\rsa_c\encrypt.c
+1537421295 source:d:\desktop\codeblocks\rsa_c\encrypt.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 	<malloc.h>
 	<string.h>
 
-1537412402 source:d:\desktop\codeblocks\rsa_c\string_hex.c
+1537421210 source:d:\desktop\codeblocks\rsa_c\string_hex.c
+	<stdio.h>
+	<stdlib.h>
+	<malloc.h>
+	<string.h>
+
+1537424014 source:f:\github\rsa_c\encrypt.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<malloc.h>
+	<string.h>
+
+1537068020 source:f:\github\rsa_c\gmp_test.c
+	<stdio.h>
+	<time.h>
+	"gmp.h"
+
+1536927316 f:\github\rsa_c\gmp.h
+	<iosfwd>
+	<cstdio>
+	<stddef.h>
+	<limits.h>
+
+1537323609 source:f:\github\rsa_c\key_generate.c
+	<stdio.h>
+	"gmp.h"
+	<time.h>
+
+1537422361 source:f:\github\rsa_c\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"RSA.h"
+	"gmp.h"
+
+1537421341 f:\github\rsa_c\rsa.h
+
+1537013621 source:f:\github\rsa_c\sieve.c
+	<stdio.h>
+	<stdbool.h>
+	<math.h>
+
+1537421536 source:f:\github\rsa_c\string_hex.c
 	<stdio.h>
 	<stdlib.h>
 	<malloc.h>
