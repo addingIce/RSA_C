@@ -14,9 +14,9 @@ int main()
     FILE *fp = fopen("key_generate.txt","w+");
     key_generate(fp);
 
-    char *plain = "baojiabin";
+    char *plain = "AAABBB123";
     Encrypt(plain, fp);
-    printf("Done!\n");
+
     fclose(fp);
 
     return 0;

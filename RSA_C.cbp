@@ -40,6 +40,9 @@
 			<Add directory="D:/Desktop/codeblocks/RSA_C/" />
 		</Linker>
 		<Unit filename="RSA.h" />
+		<Unit filename="encrypt.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="gmp.h" />
 		<Unit filename="gmp_test.c">
 			<Option compilerVar="CC" />

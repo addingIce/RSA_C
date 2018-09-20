@@ -12,14 +12,14 @@
 	<stdbool.h>
 	<math.h>
 
-1537328750 source:d:\desktop\codeblocks\rsa_c\main.c
+1537413323 source:d:\desktop\codeblocks\rsa_c\main.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
 	"RSA.h"
 	"gmp.h"
 
-1537328144 d:\desktop\codeblocks\rsa_c\rsa.h
+1537412996 d:\desktop\codeblocks\rsa_c\rsa.h
 
 1537013621 source:d:\desktop\codeblocks\rsa_c\sieve.c
 	<stdio.h>
@@ -42,7 +42,16 @@
 	"gmp.h"
 	<time.h>
 
-1537328609 source:d:\desktop\codeblocks\rsa_c\encrypt.c
+1537414081 source:d:\desktop\codeblocks\rsa_c\encrypt.c
 	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<malloc.h>
+	<string.h>
+
+1537412402 source:d:\desktop\codeblocks\rsa_c\string_hex.c
+	<stdio.h>
+	<stdlib.h>
+	<malloc.h>
 	<string.h>
 
