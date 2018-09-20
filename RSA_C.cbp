@@ -56,6 +56,9 @@
 		<Unit filename="sieve.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="string_hex.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />
