@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1536913248 source:/home/jiabin/Documents/C_workspace/RSA_C/main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"RSA.h"
+
+1536910904 /home/jiabin/Documents/C_workspace/RSA_C/RSA.h
+
+1536912848 source:/home/jiabin/Documents/C_workspace/RSA_C/sieve.c
+	<stdio.h>
+	<stdbool.h>
+	<math.h>
+
+1537328750 source:d:\desktop\codeblocks\rsa_c\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"RSA.h"
+	"gmp.h"
+
+1537328144 d:\desktop\codeblocks\rsa_c\rsa.h
+
+1537013621 source:d:\desktop\codeblocks\rsa_c\sieve.c
+	<stdio.h>
+	<stdbool.h>
+	<math.h>
+
+1537068020 source:d:\desktop\codeblocks\rsa_c\gmp_test.c
+	<stdio.h>
+	<time.h>
+	"gmp.h"
+
+1536927316 d:\desktop\codeblocks\rsa_c\gmp.h
+	<iosfwd>
+	<cstdio>
+	<stddef.h>
+	<limits.h>
+
+1537323609 source:d:\desktop\codeblocks\rsa_c\key_generate.c
+	<stdio.h>
+	"gmp.h"
+	<time.h>
+
+1537328609 source:d:\desktop\codeblocks\rsa_c\encrypt.c
+	<stdio.h>
+	<string.h>
+
