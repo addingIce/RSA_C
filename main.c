@@ -11,7 +11,7 @@ int main()
     Sieve(fp);
     fclose(fp);
     */
-    //gmp_test();
+    /*
     FILE *fp = fopen("key_generate.txt","w+");
     key_generate(fp);
 
@@ -19,6 +19,11 @@ int main()
     Encrypt(plain, fp);
 
     fclose(fp);
-
+    */
+    mpz_t base, exp, n;
+    mpz_init_set_ui(base, 2);
+    mpz_init_set_ui(exp, 5);
+    mpz_init_set_ui(n, 7);
+    exp_mod(base, exp, n);
     return 0;
 }

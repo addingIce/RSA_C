@@ -56,7 +56,7 @@
 	<malloc.h>
 	<string.h>
 
-1537424014 source:f:\github\rsa_c\encrypt.c
+1537424064 source:f:\github\rsa_c\encrypt.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -99,4 +99,10 @@
 	<stdlib.h>
 	<malloc.h>
 	<string.h>
+
+1537431702 source:f:\github\rsa_c\exp_mod.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"gmp.h"
 
