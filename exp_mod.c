@@ -4,7 +4,7 @@
 #include "gmp.h"
 
 //base^exp (mod n)
-void exp_mod(mpz_t base, mpz_t exp, mpz_t n){
+void exp_mod(FILE *fp, mpz_t base, mpz_t exp, mpz_t n){
     char exp_bit[1030];
     mpz_t m;
     mpz_init_set_ui(m, 1);
@@ -15,5 +15,5 @@ void exp_mod(mpz_t base, mpz_t exp, mpz_t n){
             mpz_mul(m, m, base);
             mpz_mod(m, m, n);
     }
-    gmp_printf("%Zd\n", m);
+    gmp_fprintf(fp, "%Zx\n", m);
 }

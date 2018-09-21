@@ -1,11 +1,13 @@
 #include <stdio.h>
-#include "gmp.h"
 #include <time.h>
+#include "gmp.h"
+#include "RSA.h"
 #define p_len 510
 #define q_len 516
+extern mpz_t p, q, n, e, d;
 void key_generate(FILE *fp){
 //定义并初始化p,q,n,d
-mpz_t p, q, n, e, d;
+//mpz_t p, q, n, e, d;
 mpz_init(p);
 mpz_init(q);
 mpz_init(n);

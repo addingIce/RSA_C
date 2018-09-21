@@ -56,12 +56,13 @@
 	<malloc.h>
 	<string.h>
 
-1537424064 source:f:\github\rsa_c\encrypt.c
+1537498608 source:f:\github\rsa_c\encrypt.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
-	<malloc.h>
 	<string.h>
+	"gmp.h"
+	"RSA.h"
 
 1537068020 source:f:\github\rsa_c\gmp_test.c
 	<stdio.h>
@@ -74,12 +75,13 @@
 	<stddef.h>
 	<limits.h>
 
-1537323609 source:f:\github\rsa_c\key_generate.c
+1537499120 source:f:\github\rsa_c\key_generate.c
 	<stdio.h>
-	"gmp.h"
 	<time.h>
+	"gmp.h"
+	"RSA.h"
 
-1537422361 source:f:\github\rsa_c\main.c
+1537497135 source:f:\github\rsa_c\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -87,7 +89,8 @@
 	"RSA.h"
 	"gmp.h"
 
-1537421341 f:\github\rsa_c\rsa.h
+1537495589 f:\github\rsa_c\rsa.h
+	"gmp.h"
 
 1537013621 source:f:\github\rsa_c\sieve.c
 	<stdio.h>
@@ -100,7 +103,7 @@
 	<malloc.h>
 	<string.h>
 
-1537431702 source:f:\github\rsa_c\exp_mod.c
+1537498223 source:f:\github\rsa_c\exp_mod.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
