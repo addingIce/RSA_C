@@ -2,8 +2,8 @@
 #include <time.h>
 #include "gmp.h"
 #include "RSA.h"
-#define p_len 510
-#define q_len 516
+#define p_len 512
+#define q_len 512
 extern mpz_t p, q, n, e, d;
 void key_generate(FILE *fp){
 //定义并初始化p,q,n,d
@@ -34,9 +34,9 @@ if(mpz_even_p(p))
 if(mpz_even_p(q))
     mpz_add_ui(q, q, 1);
 //逐个检查比p大的奇数是否为素数，使用GMP中的素数检测函数，此函数先对p做试除，再用米勒-拉宾素性检测法检测
-while(!mpz_probab_prime_p(p, 20) > 0)
+while(mpz_probab_prime_p(p, 20) <= 0)
     mpz_add_ui(p, p, 2);
-while(!mpz_probab_prime_p(q, 20) > 0)
+while(mpz_probab_prime_p(q, 20) <= 0)
     mpz_add_ui(q, q, 2);
 //将生成的p,q输出到文本
 gmp_fprintf(fp, "p: %Zx\n", p);
@@ -56,6 +56,7 @@ mpz_sub_ui(p2, p, 1);
 mpz_sub_ui(q2, q, 1);
 mpz_mul(t, p2, q2);
 mpz_invert(d, e, t);
+
 //输出公私钥
 gmp_fprintf(fp, "The public key (n, e) is (%Zx, %Zx)\n", n, e);
 gmp_fprintf(fp, "The private key (n, d) is (%Zx, %Zx)\n", n, d);

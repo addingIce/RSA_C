@@ -17,20 +17,13 @@ int main()
     key_generate(fp);
     fclose(fp);
 
-    char *plain = "AAAbdeqqbbcccc;1.+";
+    char *plain = "AAA";
     FILE *fp_cipher = fopen("ciphertext.txt","w+");
     Encrypt(plain, fp_cipher);
     fclose(fp_cipher);
 
     fp_cipher = fopen("ciphertext.txt","a+");
-    char cipher[500];
-    mpz_t C;
-    fscanf(fp_cipher, "%s\n", cipher);
-    printf("cipher:%s\n", cipher);
-    mpz_init_set_str(C, cipher, 16);
-    gmp_printf("C: %Zx\n", C);
-    //gmp_fscanf(fp_cipher, "%Zx\n", C);
-    exp_mod(fp_cipher, C, d, n);
+    Decrypt(fp_cipher);
     fclose(fp_cipher);
 
     return 0;
