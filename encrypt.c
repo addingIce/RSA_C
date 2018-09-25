@@ -23,6 +23,25 @@ void Padding(char *result, char *src){
     strcat(result, src);
 }
 
+//base^exp (mod n)
+void exp_mod(FILE *fp, mpz_t base, mpz_t exp, mpz_t n){
+    char exp_bit[1030];
+    mpz_t m;
+    mpz_init_set_ui(m, 1);
+
+    mpz_get_str(exp_bit, 2, exp);
+    for(int i =0; i<strlen(exp_bit); i++){
+        mpz_mul(m, m, m);
+        mpz_mod(m, m, n);
+        if(exp_bit[i] == '1'){
+            mpz_mul(m, m, base);
+            mpz_mod(m, m, n);
+        }
+    }
+
+    //gmp_printf("result: %Zx\n", m);
+    gmp_fprintf(fp, "%Zx\n", m);
+}
 
 void Encrypt(char *plaintext, FILE *fp_cipher){
     mpz_t M;
@@ -38,7 +57,7 @@ void Encrypt(char *plaintext, FILE *fp_cipher){
         strcat(padding_plain, "0002");
         Padding(padding_plain, hex_plaintext);
         mpz_init_set_str(M, padding_plain, 16);
-        gmp_printf("M: %Zx\n", M);
+        //gmp_printf("M: %Zx\n", M);
         exp_mod(fp_cipher, M, e, n);    //¼ÓÃÜÃ÷ÎÄM
 
     }

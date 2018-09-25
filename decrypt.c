@@ -12,7 +12,7 @@ void Decrypt(FILE *fp_cipher){
     mpz_t C;
     fscanf(fp_cipher, "%s\n", cipher);
     mpz_init_set_str(C, cipher, 16);
-    gmp_printf("C: %Zx\n", C);
+    //gmp_printf("C: %Zx\n", C);
 //    exp_mod(fp_cipher, C, d, n);
     //CRT MMRC
     mpz_t p1, q1, d1, d2, C1, C2, M1, M2, B, m;
@@ -26,6 +26,7 @@ void Decrypt(FILE *fp_cipher){
     mpz_init(M2);
     mpz_init(B);
     mpz_init(m);
+
     mpz_sub_ui(p1, p, 1);
     mpz_sub_ui(q1, q, 1);
     mpz_mod(d1, d, p1);
@@ -40,6 +41,12 @@ void Decrypt(FILE *fp_cipher){
     mpz_mod(m, m, q);
     mpz_mul(m, m, p);
     mpz_add(m, M1, m);
-    gmp_printf("result: %Zx\n", m);
+    //gmp_printf("result: %Zx\n", m);
+
+    char m_hex[260] = "0";
+    mpz_get_str(m_hex+1, 16, m);
+    char text[120];
+    Hex2String(m_hex, text);
+    printf("plaintext:%s\n", text);
 
 }

@@ -5,6 +5,8 @@
 #include "RSA.h"
 #include "gmp.h"
 extern mpz_t p, q, n, e, d;
+
+
 int main()
 {
     /*
@@ -17,7 +19,7 @@ int main()
     key_generate(fp);
     fclose(fp);
 
-    char *plain = "AAAExecuting: E:CodeBlockscb_console_runner.exeF:GithubRSA_CbinDebugRSA_C.exe";
+    char *plain = "AAAvdrse2']s[csevs5awc";
     FILE *fp_cipher = fopen("ciphertext.txt","w+");
     Encrypt(plain, fp_cipher);
     fclose(fp_cipher);
@@ -27,4 +29,5 @@ int main()
     fclose(fp_cipher);
 
     return 0;
+
 }
