@@ -17,7 +17,7 @@ int main()
     key_generate(fp);
     fclose(fp);
 
-    char *plain = "AAA";
+    char *plain = "AAAExecuting: E:CodeBlockscb_console_runner.exeF:GithubRSA_CbinDebugRSA_C.exe";
     FILE *fp_cipher = fopen("ciphertext.txt","w+");
     Encrypt(plain, fp_cipher);
     fclose(fp_cipher);
