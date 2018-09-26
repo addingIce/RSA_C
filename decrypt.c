@@ -8,9 +8,10 @@ extern mpz_t p, q, n, e, d;
 
 void Decrypt(FILE *fp_cipher){
 
+    while(!feof(fp_cipher)){
     char cipher[500];
     mpz_t C;
-    fscanf(fp_cipher, "%s\n", cipher);
+    fscanf(fp_cipher, "%s", cipher);
     mpz_init_set_str(C, cipher, 16);
     //gmp_printf("C: %Zx\n", C);
 //    exp_mod(fp_cipher, C, d, n);
@@ -47,6 +48,7 @@ void Decrypt(FILE *fp_cipher){
     mpz_get_str(m_hex+1, 16, m);
     char text[120];
     Hex2String(m_hex, text);
-    printf("plaintext:%s\n", text);
-
+    printf("plaintext:%s", text);
+    }
+    printf("\n");
 }

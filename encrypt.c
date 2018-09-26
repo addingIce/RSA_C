@@ -6,6 +6,7 @@
 #include "RSA.h"
 #define block_size 128
 #define plain_size 117
+
 extern mpz_t p, q, n, e, d;
 // EB = 00 + 02 + PS + 00 + plain   128bytes
 void Padding(char *result, char *src){
@@ -45,16 +46,18 @@ void exp_mod(FILE *fp, mpz_t base, mpz_t exp, mpz_t n){
 
 void Encrypt(char *plaintext, FILE *fp_cipher){
     mpz_t M;
-    char plain_block[118];
+    char plain_block[120];
     for(int i=0; i<=strlen(plaintext)/plain_size; i++){
-        if(i<strlen(plaintext))
+        if(i<strlen(plaintext)/plain_size){
             strncpy(plain_block, plaintext + i*plain_size, plain_size);
+            plain_block[plain_size] = '\0';
+        }
         else
             strcpy(plain_block, plaintext + i*plain_size);
-        char hex_plaintext[234] = "";   //明文转换得来的16进制ASCII码
-        char padding_plain[256] = "";   //paddin完成后的分组
-        String2Hex(plain_block, hex_plaintext);
+        char hex_plaintext[240] = "";   //明文转换得来的16进制ASCII码
+        char padding_plain[260] = "";   //paddin完成后的分组
         strcat(padding_plain, "0002");
+        String2Hex(plain_block, hex_plaintext);
         Padding(padding_plain, hex_plaintext);
         mpz_init_set_str(M, padding_plain, 16);
         //gmp_printf("M: %Zx\n", M);
