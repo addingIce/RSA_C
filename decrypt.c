@@ -6,12 +6,12 @@
 #include "RSA.h"
 extern mpz_t p, q, n, e, d;
 
-void Decrypt(FILE *fp_cipher){
-
-    while(!feof(fp_cipher)){
+void Decrypt(FILE *fp_cipher, FILE *fp_plain){
+    //printf("Decrypt result:\n");
     char cipher[500];
-    mpz_t C;
     fscanf(fp_cipher, "%s", cipher);
+    while(!feof(fp_cipher)){
+    mpz_t C;
     mpz_init_set_str(C, cipher, 16);
     //gmp_printf("C: %Zx\n", C);
 //    exp_mod(fp_cipher, C, d, n);
@@ -48,7 +48,10 @@ void Decrypt(FILE *fp_cipher){
     mpz_get_str(m_hex+1, 16, m);
     char text[120];
     Hex2String(m_hex, text);
-    printf("plaintext:%s", text);
+    printf("%s", text);
+    fprintf(fp_plain, text);
+
+    fscanf(fp_cipher, "%s", cipher);
     }
-    printf("\n");
+    //printf("\n");
 }

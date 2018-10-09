@@ -1,0 +1,1 @@
+Note: in the following steps, we'll assume you're using a 64-bit Windows. Therefore, the package names include the x86_64 architecture identifier. If you're using a 32-bit Windows, please adapt the instructions below using the i686 architecture identifier.

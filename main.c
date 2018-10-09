@@ -20,14 +20,19 @@ int main()
     key_generate(fp);
     fclose(fp);
 
-    char *plain = "AAAvdrse2']s[csevs5awc*-1+s21sdcAAAvdrse2']s[csevs5awc*-1+s21sdcAAAvdrse2']s[csevs5awc*-1+s21sdcAAAvdrse2']s[csevs5awc*-1+s21sdcAAAvdrse2']s[csevs5awc*-1+s21sdc";
+
+    char *plain = "Note: in the following steps, we'll assume you're using a 64-bit Windows. Therefore, the package names include the x86_64 architecture identifier. If you're using a 32-bit Windows, please adapt the instructions below using the i686 architecture identifier.";
+    //char *plain = "AAA";
     FILE *fp_cipher = fopen("ciphertext.txt","w+");
     Encrypt(plain, fp_cipher);
     fclose(fp_cipher);
 
+
     fp_cipher = fopen("ciphertext.txt","a+");
-    Decrypt(fp_cipher);
+    FILE *fp_plain = fopen("plaintext.txt", "w+");
+    Decrypt(fp_cipher, fp_plain);
     fclose(fp_cipher);
+    fclose(fp_plain);
 
     return 0;
 
